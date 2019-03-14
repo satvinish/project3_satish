@@ -138,8 +138,7 @@ set.seed(1)
 library(randomForest)
 a.EEGData<-randomForest(Attention~.,EEGData,
                             subset = train_proj,mtry = 3,importance = TRUE)
-rf.Carseats<-randomForest(High~. -Sales,Carseats,subset = train,mtry = 3,importance = TRUE)
-dim(Carseats)
+dim(a.EEGData)
 importance(a.EEGData)
 
 varImpPlot(a.EEGData,col = 'blue',pch = 10, cex = 1.25)
