@@ -88,7 +88,7 @@ str(EEGData)
 train_proj <- EEGData[1:10249,] # creating train data
 test_proj <- EEGData[10250:12812,]# creating test data
 
-# removing Loan ID from  train and test data
+# removing Subject ID from  train and test data
 train_proj <- subset(train_proj,select = -c(SubjectID))
 test_proj <- subset(test_proj,select = -c(SubjectID))
 
